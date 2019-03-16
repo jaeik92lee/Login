@@ -25,12 +25,4 @@ public class LoginView {
         userService.saveUser(id, password);
     }
 
-    public void findAllUsers() {
-        List<UserModel> userModelList = userService.findAll();
-
-        System.out.println("[ USER LIST ]");
-        for (UserModel userModel : userModelList) {
-            System.out.println(userModel.toString());
-        }
-    }
 }
