@@ -12,15 +12,6 @@ public class UserRepository {
         return 0;
     }
 
-    public UserModel findUserById(String id) {
-        for (UserModel userModel : LocalDB.userList) {
-            if(id.equalsIgnoreCase(userModel.getId())) {
-                return userModel;
-            }
-        }
-        return null;
-    }
-
     public List<UserModel> findAll() {
         return LocalDB.userList;
     }

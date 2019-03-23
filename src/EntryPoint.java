@@ -1,13 +1,18 @@
-import view.LoginView;
+import db.LocalDB;
+import model.UserModel;
+import view.FrontView;
 
 public class EntryPoint {
 
     public static void main(String[] args) {
-        LoginView loginView = new LoginView();
-        loginView.registerView();
-        loginView.registerView();
-        loginView.registerView();
 
-        loginView.findAllUsers();
+        UserModel userModel = new UserModel();
+        userModel.setId("jaeik");
+        userModel.setPassword("pwd");
+
+        LocalDB.userList.add(userModel);
+
+        FrontView frontView = new FrontView();
+        frontView.registerView();
     }
 }
